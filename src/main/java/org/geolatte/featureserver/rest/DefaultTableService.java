@@ -24,6 +24,7 @@ package org.geolatte.featureserver.rest;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.geolatte.common.Feature;
+import org.geolatte.common.automapper.AutoMapper;
 import org.geolatte.common.dataformats.csv.CsvSerializationTransformation;
 import org.geolatte.common.dataformats.json.jackson.JsonSerializationTransformation;
 import org.geolatte.common.dataformats.json.jackson.SimpleDateFormatSerializer;
@@ -36,7 +37,6 @@ import org.geolatte.featureserver.dbase.DatabaseException;
 import org.geolatte.featureserver.dbase.DbaseFacade;
 import org.geolatte.featureserver.dbase.StandardFeatureReader;
 import org.hibernate.criterion.Order;
-import org.hibernatespatial.pojo.AutoMapper;
 
 import javax.ws.rs.core.Response;
 import java.lang.reflect.Field;

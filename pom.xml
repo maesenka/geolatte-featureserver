@@ -136,7 +136,7 @@
         <dependency>
             <groupId>org.geolatte</groupId>
             <artifactId>geolatte-common-hibernate</artifactId>
-            <version>0.5.1</version>
+            <version>0.6-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>

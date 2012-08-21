@@ -24,6 +24,7 @@ package org.geolatte.featureserver.dbase;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 import org.dom4j.Document;
+import org.geolatte.common.automapper.AutoMapper;
 import org.geolatte.featureserver.config.FeatureServerConfiguration;
 import org.hibernate.*;
 import org.hibernate.cfg.Configuration;
@@ -31,7 +32,6 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
 import org.hibernatespatial.cfg.HSConfiguration;
-import org.hibernatespatial.pojo.AutoMapper;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -87,7 +87,7 @@ public class DbaseFacade {
         // We may only invoke this once, since currently the automapper crashes if a table was already mapped in the
         // past. Since this call is present in the private constructor which is only called in the singleton method
         // there is no problem.
-        Document tableMapping = AutoMapper.map(dbConnection, null, schema,mappedTables);
+        Document tableMapping = AutoMapper.map(dbConnection, null, schema, mappedTables);
         resultSet.close();
         dbConnection.close();
         newConfig.addXML(tableMapping.asXML());
