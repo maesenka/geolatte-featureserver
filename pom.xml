@@ -120,7 +120,7 @@
         <dependency>
             <groupId>org.geolatte</groupId>
             <artifactId>geolatte-common-hibernate</artifactId>
-            <version>0.6-SNAPSHOT</version>
+            <version>0.7-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>org.hibernatespatial</groupId>
